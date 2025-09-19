@@ -7,7 +7,6 @@ const Countries = ({countriesPromise}) => {
     const handleVisitCountries = (country) => {
         const newVisitedCountries = [...visitCountries, country];
         setVisitCountries(newVisitedCountries);
-        console.log(newVisitedCountries);
     }
 
     const [visitCountryFlag, setVisitCountryFlag] = useState([]);
@@ -22,15 +21,17 @@ const Countries = ({countriesPromise}) => {
         <>
             <h2 style={{textAlign: 'center', fontWeight: 'bold', fontSize: '30px'}}>Total Countries Number {countries.length}</h2>
             <h2>Visited countries: {visitCountries.length}</h2>
-            <ol>
-                {
-                    visitCountries.map(country => <li key={country.cca3.cca3}>{country.name.common}</li>)
-                }
-            </ol>
-            <div className='flag-container'>
-                {
-                    visitCountryFlag.map(flag => <img key={flag.cca3.cca3} src={flag.flags.flags.png} alt={flag.flags.flags.alt} />)
-                }
+            <div className='side'>
+                <ol>
+                    {
+                        visitCountries.map(country => <li key={country.cca3.cca3}>{country.name.common}</li>)
+                    }
+                </ol>
+                <div className='flag-container'>
+                    {
+                        visitCountryFlag.map(flag => <img key={flag.cca3.cca3} src={flag.flags.flags.png} alt={flag.flags.flags.alt} />)
+                    }
+                </div>
             </div>
             <div className='countries'>
                 {

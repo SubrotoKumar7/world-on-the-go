@@ -5,8 +5,15 @@
 }
 .flag-container{
     display: flex;
+    flex-wrap: wrap;
 }
 .flag-container img{
     width: 100px;
     margin: 10px;
+}
+.side{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
