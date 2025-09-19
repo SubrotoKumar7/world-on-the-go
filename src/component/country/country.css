@@ -1,6 +1,12 @@
 .country{
-    border: 2px solid green;
+    border: 2px solid #191970;
     margin: 20px;
     padding: 20px;
     border-radius: 5px;
+}
+.country-visited{
+    background: #191970b6;
+}
+.flex{
+    display: flex;
 }
